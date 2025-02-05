@@ -1,0 +1,1205 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cleanedAviationData+' inline='true' name='federated.17p2zn709fl7yi18d3l9l0pstxc4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleanedAviationData' name='textscan.0v77fdr0alynhz1dyuur40bv7ew8'>
+            <connection class='textscan' directory='C:/Users/HP/Documents/Moringaschool/Phase1/Project_phase1' filename='cleanedAviationData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0v77fdr0alynhz1dyuur40bv7ew8' name='cleanedAviationData.csv' table='[cleanedAviationData#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Accident.Number' ordinal='0' />
+              <column datatype='date' name='Event.Date' ordinal='1' />
+              <column datatype='string' name='Location' ordinal='2' />
+              <column datatype='string' name='Country' ordinal='3' />
+              <column datatype='string' name='Investigation.Type' ordinal='4' />
+              <column datatype='string' name='Injury.Severity' ordinal='5' />
+              <column datatype='string' name='Registration.Number' ordinal='6' />
+              <column datatype='string' name='Make' ordinal='7' />
+              <column datatype='string' name='Model' ordinal='8' />
+              <column datatype='string' name='Amateur.Built' ordinal='9' />
+              <column datatype='real' name='Number.of.Engines' ordinal='10' />
+              <column datatype='string' name='Engine.Type' ordinal='11' />
+              <column datatype='string' name='Purpose.of.flight' ordinal='12' />
+              <column datatype='real' name='Total.Fatal.Injuries' ordinal='13' />
+              <column datatype='real' name='Total.Serious.Injuries' ordinal='14' />
+              <column datatype='real' name='Total.Minor.Injuries' ordinal='15' />
+              <column datatype='real' name='Total.Uninjured' ordinal='16' />
+              <column datatype='string' name='Weather.Condition' ordinal='17' />
+              <column datatype='integer' name='Year' ordinal='18' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0v77fdr0alynhz1dyuur40bv7ew8' name='accidents_by_purpose.csv' table='[accidents_by_purpose#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Purpose.of.flight' ordinal='0' />
+              <column datatype='integer' name='Number of Accidents' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Accident.Number]' value='[cleanedAviationData.csv].[Accident.Number]' />
+          <map key='[Amateur.Built]' value='[cleanedAviationData.csv].[Amateur.Built]' />
+          <map key='[Country]' value='[cleanedAviationData.csv].[Country]' />
+          <map key='[Engine.Type]' value='[cleanedAviationData.csv].[Engine.Type]' />
+          <map key='[Event.Date]' value='[cleanedAviationData.csv].[Event.Date]' />
+          <map key='[Injury.Severity]' value='[cleanedAviationData.csv].[Injury.Severity]' />
+          <map key='[Investigation.Type]' value='[cleanedAviationData.csv].[Investigation.Type]' />
+          <map key='[Location]' value='[cleanedAviationData.csv].[Location]' />
+          <map key='[Make]' value='[cleanedAviationData.csv].[Make]' />
+          <map key='[Model]' value='[cleanedAviationData.csv].[Model]' />
+          <map key='[Number of Accidents]' value='[accidents_by_purpose.csv].[Number of Accidents]' />
+          <map key='[Number.of.Engines]' value='[cleanedAviationData.csv].[Number.of.Engines]' />
+          <map key='[Purpose.of.flight (accidents_by_purpose.csv)]' value='[accidents_by_purpose.csv].[Purpose.of.flight]' />
+          <map key='[Purpose.of.flight]' value='[cleanedAviationData.csv].[Purpose.of.flight]' />
+          <map key='[Registration.Number]' value='[cleanedAviationData.csv].[Registration.Number]' />
+          <map key='[Total.Fatal.Injuries]' value='[cleanedAviationData.csv].[Total.Fatal.Injuries]' />
+          <map key='[Total.Minor.Injuries]' value='[cleanedAviationData.csv].[Total.Minor.Injuries]' />
+          <map key='[Total.Serious.Injuries]' value='[cleanedAviationData.csv].[Total.Serious.Injuries]' />
+          <map key='[Total.Uninjured]' value='[cleanedAviationData.csv].[Total.Uninjured]' />
+          <map key='[Weather.Condition]' value='[cleanedAviationData.csv].[Weather.Condition]' />
+          <map key='[Year]' value='[cleanedAviationData.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[accidents_by_purpose.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Accident.Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Accident.Number]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Accident.Number</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Event.Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Event.Date]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Event.Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Investigation.Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Investigation.Type]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Investigation.Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Injury.Severity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Injury.Severity]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Injury.Severity</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Registration.Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Registration.Number]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Registration.Number</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Make</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Make]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Make</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Model]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Model</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amateur.Built</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Amateur.Built]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Amateur.Built</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number.of.Engines</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Number.of.Engines]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Number.of.Engines</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Engine.Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Engine.Type]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Engine.Type</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Purpose.of.flight</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Purpose.of.flight]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Purpose.of.flight</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total.Fatal.Injuries</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total.Fatal.Injuries]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Total.Fatal.Injuries</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total.Serious.Injuries</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total.Serious.Injuries]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Total.Serious.Injuries</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total.Minor.Injuries</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total.Minor.Injuries]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Total.Minor.Injuries</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total.Uninjured</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total.Uninjured]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Total.Uninjured</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weather.Condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Weather.Condition]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Weather.Condition</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[cleanedAviationData.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Purpose.of.flight</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Purpose.of.flight (accidents_by_purpose.csv)]</local-name>
+            <parent-name>[accidents_by_purpose.csv]</parent-name>
+            <remote-alias>Purpose.of.flight</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Accidents</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Accidents]</local-name>
+            <parent-name>[accidents_by_purpose.csv]</parent-name>
+            <remote-alias>Number of Accidents</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Purpose.of.flight (accidents by purpose.csv)' datatype='string' name='[Purpose.of.flight (accidents_by_purpose.csv)]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='accidents_by_purpose.csv' datatype='table' name='[__tableau_internal_object_id__].[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]' role='measure' type='quantitative' />
+      <column caption='cleanedAviationData.csv' datatype='table' name='[__tableau_internal_object_id__].[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/HP/AppData/Local/Temp/TableauTemp/#TableauTemp_062jkvl05hn0xk19w5pm30ygna8y.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/05/2025 12:41:08 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4' table='[Extract].[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]' type='table' />
+            <relation name='accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8' table='[Extract].[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Accident.Number]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Accident.Number]' />
+            <map key='[Amateur.Built]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Amateur.Built]' />
+            <map key='[Country]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Country]' />
+            <map key='[Engine.Type]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Engine.Type]' />
+            <map key='[Event.Date]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Event.Date]' />
+            <map key='[Injury.Severity]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Injury.Severity]' />
+            <map key='[Investigation.Type]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Investigation.Type]' />
+            <map key='[Location]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Location]' />
+            <map key='[Make]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Make]' />
+            <map key='[Model]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Model]' />
+            <map key='[Number of Accidents]' value='[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8].[Number of Accidents]' />
+            <map key='[Number.of.Engines]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Number.of.Engines]' />
+            <map key='[Purpose.of.flight (accidents_by_purpose.csv)]' value='[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8].[Purpose.of.flight]' />
+            <map key='[Purpose.of.flight]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Purpose.of.flight]' />
+            <map key='[Registration.Number]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Registration.Number]' />
+            <map key='[Total.Fatal.Injuries]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Total.Fatal.Injuries]' />
+            <map key='[Total.Minor.Injuries]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Total.Minor.Injuries]' />
+            <map key='[Total.Serious.Injuries]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Total.Serious.Injuries]' />
+            <map key='[Total.Uninjured]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Total.Uninjured]' />
+            <map key='[Weather.Condition]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Weather.Condition]' />
+            <map key='[Year]' value='[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4].[Year]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Accident.Number</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Accident.Number]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Accident.Number</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>88888</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Event.Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Event.Date]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Event.Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>22250</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17177</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>607</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Investigation.Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Investigation.Type]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Investigation.Type</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Injury.Severity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Injury.Severity]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Injury.Severity</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Registration.Number</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Registration.Number]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Registration.Number</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>73846</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Make</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Make]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Make</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2579</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Model</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Model]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Model</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5619</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amateur.Built</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Amateur.Built]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Amateur.Built</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number.of.Engines</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Number.of.Engines]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Number.of.Engines</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Engine.Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Engine.Type]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Engine.Type</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Purpose.of.flight</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Purpose.of.flight]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Purpose.of.flight</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total.Fatal.Injuries</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total.Fatal.Injuries]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Total.Fatal.Injuries</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total.Serious.Injuries</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total.Serious.Injuries]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Total.Serious.Injuries</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total.Minor.Injuries</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total.Minor.Injuries]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Total.Minor.Injuries</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total.Uninjured</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total.Uninjured]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Total.Uninjured</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>331</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Weather.Condition</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Weather.Condition]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Weather.Condition</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cleanedAviationData.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Purpose.of.flight</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Purpose.of.flight (accidents_by_purpose.csv)]</local-name>
+              <parent-name>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</parent-name>
+              <remote-alias>Purpose.of.flight</remote-alias>
+              <ordinal>19</ordinal>
+              <family>accidents_by_purpose.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Accidents</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Accidents]</local-name>
+              <parent-name>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</parent-name>
+              <remote-alias>Number of Accidents</remote-alias>
+              <ordinal>20</ordinal>
+              <family>accidents_by_purpose.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Kenya&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='accidents_by_purpose.csv' id='accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8'>
+            <properties context=''>
+              <relation connection='textscan.0v77fdr0alynhz1dyuur40bv7ew8' name='accidents_by_purpose.csv' table='[accidents_by_purpose#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Purpose.of.flight' ordinal='0' />
+                  <column datatype='integer' name='Number of Accidents' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8' table='[Extract].[accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8]' type='table' />
+            </properties>
+          </object>
+          <object caption='cleanedAviationData.csv' id='cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4'>
+            <properties context=''>
+              <relation connection='textscan.0v77fdr0alynhz1dyuur40bv7ew8' name='cleanedAviationData.csv' table='[cleanedAviationData#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Accident.Number' ordinal='0' />
+                  <column datatype='date' name='Event.Date' ordinal='1' />
+                  <column datatype='string' name='Location' ordinal='2' />
+                  <column datatype='string' name='Country' ordinal='3' />
+                  <column datatype='string' name='Investigation.Type' ordinal='4' />
+                  <column datatype='string' name='Injury.Severity' ordinal='5' />
+                  <column datatype='string' name='Registration.Number' ordinal='6' />
+                  <column datatype='string' name='Make' ordinal='7' />
+                  <column datatype='string' name='Model' ordinal='8' />
+                  <column datatype='string' name='Amateur.Built' ordinal='9' />
+                  <column datatype='real' name='Number.of.Engines' ordinal='10' />
+                  <column datatype='string' name='Engine.Type' ordinal='11' />
+                  <column datatype='string' name='Purpose.of.flight' ordinal='12' />
+                  <column datatype='real' name='Total.Fatal.Injuries' ordinal='13' />
+                  <column datatype='real' name='Total.Serious.Injuries' ordinal='14' />
+                  <column datatype='real' name='Total.Minor.Injuries' ordinal='15' />
+                  <column datatype='real' name='Total.Uninjured' ordinal='16' />
+                  <column datatype='string' name='Weather.Condition' ordinal='17' />
+                  <column datatype='integer' name='Year' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4' table='[Extract].[cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Purpose.of.flight]' />
+              <expression op='[Purpose.of.flight (accidents_by_purpose.csv)]' />
+            </expression>
+            <first-end-point object-id='cleanedAviationData.csv_203C340EDF1D491EB20C510C682A9BB4' />
+            <second-end-point object-id='accidents_by_purpose.csv_BF5443F91E944BDABE83CD154E1067D8' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Countries with the most aviation accidents '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedAviationData+' name='federated.17p2zn709fl7yi18d3l9l0pstxc4' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.17p2zn709fl7yi18d3l9l0pstxc4'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Total.Fatal.Injuries]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Total.Minor.Injuries]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Total.Serious.Injuries]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total.Fatal.Injuries]' derivation='Sum' name='[sum:Total.Fatal.Injuries:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total.Minor.Injuries]' derivation='Sum' name='[sum:Total.Minor.Injuries:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total.Serious.Injuries]' derivation='Sum' name='[sum:Total.Serious.Injuries:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[Longitude (generated)]' field-type='quantitative' max='25443252.325461809' min='-24215960.639877107' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[Latitude (generated)]' field-type='quantitative' max='10960757.666415408' min='-15645647.202476854' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='size' field='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' value='Total.Fatal.Injuries'>
+              <formatted-text>
+                <run>Total.Fatal.Injuries</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' />
+              <lod column='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[none:Country:nk]' />
+              <size column='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' />
+              <lod column='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Minor.Injuries:qk]' />
+              <lod column='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Serious.Injuries:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.17p2zn709fl7yi18d3l9l0pstxc4].[Latitude (generated)]</rows>
+        <cols>[federated.17p2zn709fl7yi18d3l9l0pstxc4].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{85823257-20EA-4873-9A4D-E6C86EC985A7}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A04BB2B1-BFE0-4D1C-B9E1-26513A6B37C7}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Countries with the most aviation accidents '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.17p2zn709fl7yi18d3l9l0pstxc4].[sum:Total.Fatal.Injuries:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.17p2zn709fl7yi18d3l9l0pstxc4].[none:Country:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4D565D35-BD96-4C4A-AE0D-34F4B7D2780C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8016EF9B-D94B-4887-A9B2-EA79D5B990CC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Countries with the most aviation accidents ' width='192'>
+      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
+      TgFVOZ739kgAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
