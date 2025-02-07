@@ -19,7 +19,7 @@ Analysis are based on our business questions as shown below.
 
 #### 1. Determining trends in aviation accidents over time
 Visualization below shows the trends in aviation accidents over time.
-![Trend_of_aviation_accidents](Trend_of_aviation_accidents.png)
+![Trend_of_aviation_accidents](images/Trend_of_aviation_accidents.png)
 We can observe that there has been an overall drop of aviation accidents from 1982 to the year 2023. In the year 1982 we had the highest record of aviation accidents and 2020 having the lowest as the current lowest aviation accident recorded. From the year 1963 to 1981 we had the lowest aviation accidents recorded.
 
 ### 2. Analyzing trends in Injuries Due to Aviation Accidents Over Time
