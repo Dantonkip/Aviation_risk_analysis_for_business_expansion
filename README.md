@@ -31,28 +31,28 @@ Fatal, serious and minor injuries have been recorded to be reducing gradually ov
 
 ### 3. Determining if weather conditions influence accidents
 The bar graph below shows how weather influence aviation accidents.
-![Accidents by weather conditions](Accidents_by_weather_conditions.png)
+![Accidents by weather conditions](Images/Accidents_by_weather_conditions.png)
 From the above visualization: It turns out that accidents are mainly experienced during visual meteorological conditions (VMC) compared to instrument meteorological conditions (IMC) which might seem counterintuitive as one might expect more accidents in poorer visibility conditions
 
 ### 4. Determining wheter there specific aircraft models that are involved in more accidents
 From the bar graph below we can come to a conclusion in which aircrafts are prone to accidents.
-![Aircraft models mainly involved in accidents](Aircraft_models_involved_in_accidents.png)
+![Aircraft models mainly involved in accidents](Images/Aircraft_models_involved_in_accidents.png)
 The aircraft model 152 has the highest accident count, with just over 2000 accidents. This is significantly higher than any other model listed on the graph. Followed by model 172 with accidents over 1500 recorded. This shows that models with high accident records like 152, 172 and 172N are likely to be in an accidet compared to other models.
 
 ### 5. Analyzing the correlation between the number of engines and number of accidents
 The scatterplot below shows the relationship between the number of engines and the number of accidents.
-![Correlation between Number of Engines and Number of Accidents]((Correlation_btw_nmb_Engines_and_Number_of _Accidents.png))
+![Correlation between Number of Engines and Number of Accidents](Images/Correlation_btw_nmb_Engines_and_Number_of _Accidents.png)
 We can also observe that Correlation between Number of accidents and Number of engines is a weak negative correlation of -0.42925333836 hence does not influence the number of accidents.
 
 ### 6. Defining relationship between the purpose of the plane and the number of accidents
 Below is a bar graph showing the trends between the purpose of the plane and the number of accidents.
-![Acident frequency by purpose of flight](Purpose_of_flight.png)
+![Acident frequency by purpose of flight](Images/Purpose_of_flight.png)
 We can observe that personal flights have the highest record of number of accidents of over 4000.
 
 For the other purposes of flight each has a records of less than 2000 with flight test with the least.
 ### 7. Finding out Which countries or locations experience the highest number of aviation accidents
 From visualization below we can find out which country has the highest record of accidents
-![Top 10 countries with highest recorded aviation accidents](Country_high_record.png)
+![Top 10 countries with highest recorded aviation accidents](Images/Country_high_record.png)
 As seen from the visualization above, the United states is the most dominant country in our dataset with over 90% of data.
 
 ## Conclusion
