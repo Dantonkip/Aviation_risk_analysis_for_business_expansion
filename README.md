@@ -41,7 +41,7 @@ The aircraft model 152 has the highest accident count, with just over 2000 accid
 
 ### 5. Analyzing the correlation between the number of engines and number of accidents
 The scatterplot below shows the relationship between the number of engines and the number of accidents.
-![Correlation between Number of Engines and Number of Accidents]((Images/Correlation_btw_nmb_Engines_and_Number_of _Accidents.png))
+![Correlation between Number of Engines and Number of Accidents](Images/Correlation_btw_nmb_Engines_and_Number_of _Accidents.png)
 We can also observe that Correlation between Number of accidents and Number of engines is a weak negative correlation of -0.42925333836 hence does not influence the number of accidents.
 
 ### 6. Defining relationship between the purpose of the plane and the number of accidents
