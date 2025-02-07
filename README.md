@@ -40,8 +40,8 @@ From the bar graph below we can come to a conclusion in which aircrafts are pron
 The aircraft model 152 has the highest accident count, with just over 2000 accidents. This is significantly higher than any other model listed on the graph. Followed by model 172 with accidents over 1500 recorded. This shows that models with high accident records like 152, 172 and 172N are likely to be in an accidet compared to other models.
 
 ### 5. Analyzing the correlation between the number of engines and number of accidents
-The scatterplot below shows the relationship between the number of engines and the number of accidents.
-![Correlation between Number of Engines and Number of Accidents](Images/Correlation_btw_nmb_Engines_and_Number_of _Accidents.png)
+The scatterplot below shows the relationship between the number of engines and the number of accidents 
+![Correlation between Number of Engines and Number of Accidents](Images/Correlation_image.png)
 We can also observe that Correlation between Number of accidents and Number of engines is a weak negative correlation of -0.42925333836 hence does not influence the number of accidents.
 
 ### 6. Defining relationship between the purpose of the plane and the number of accidents
